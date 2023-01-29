@@ -12,10 +12,16 @@ public class movimientos : MonoBehaviour
     public Rigidbody rigidBody;
     public float fuerzaDeSalto = 8f;
     public bool saltarDisponible;
+
+    public float velInicial;
+    public float velAgachado;
     void Start()
     {
         saltarDisponible = false;
         animador = GetComponent<Animator>();
+
+        velInicial = velocidadMovimiento;
+        velAgachado = velocidadMovimiento * 0.5f;
     }
     void FixedUpdate()
     {
@@ -36,6 +42,16 @@ public class movimientos : MonoBehaviour
             {
                 animador.SetBool("Salto", true);
                 rigidBody.AddForce(new Vector3(0, fuerzaDeSalto, 0), ForceMode.Impulse);
+            }
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                animador.SetBool("agachado", true);
+                velocidadMovimiento = velAgachado;
+            }
+            else
+            {
+                animador.SetBool("agachado", false);
+                velocidadMovimiento = velInicial;
             }
             animador.SetBool("Toco suelo", true);
         }
