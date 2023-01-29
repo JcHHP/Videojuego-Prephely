@@ -4,52 +4,49 @@ using UnityEngine;
 
 public class movimientos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float velmov = 5.0f;
-    public float velrot = 200.0f;
-    private Animator anim;
+    public float velocidadMovimiento = 5.0f;
+    public float velocidadRotacion = 200.0f;
+    private Animator animador;
     public float x, y;
 
-    public Rigidbody rb;
-    public float fuerzaDeSalto = 15f;
-    public bool puedoSaltar;
+    public Rigidbody rigidBody;
+    public float fuerzaDeSalto = 8f;
+    public bool saltarDisponible;
     void Start()
     {
-        puedoSaltar = false;
-        anim = GetComponent<Animator>();
+        saltarDisponible = false;
+        animador = GetComponent<Animator>();
     }
     void FixedUpdate()
     {
-        transform.Rotate(0, x * Time.deltaTime * velrot, 0);
-        transform.Translate(0, 0, y * Time.deltaTime * velmov);
+        transform.Rotate(0, x * Time.deltaTime * velocidadRotacion, 0);
+        transform.Translate(0, 0, y * Time.deltaTime * velocidadMovimiento);
     }
-
-    // Update is called once per frame
     void Update()
     {
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
 
-        anim.SetFloat("velocidadX", x);
-        anim.SetFloat("velocidadY", y);
+        animador.SetFloat("velocidadX", x);
+        animador.SetFloat("velocidadY", y);
 
-        if (puedoSaltar)
+        if (saltarDisponible)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                anim.SetBool("Salto", true);
-                rb.AddForce(new Vector3(0, fuerzaDeSalto, 0), ForceMode.Impulse);
+                animador.SetBool("Salto", true);
+                rigidBody.AddForce(new Vector3(0, fuerzaDeSalto, 0), ForceMode.Impulse);
             }
-            anim.SetBool("Toco suelo", true);
+            animador.SetBool("Toco suelo", true);
         }
         else
         {
-            EstoyCayendo();
+            caer();
         }
     }
-    public void EstoyCayendo()
+    void caer()
     {
-        anim.SetBool("Toco suelo", false);
-        anim.SetBool("Salto", false);
+        animador.SetBool("Toco suelo", false);
+        animador.SetBool("Salto", false);
     }
 }

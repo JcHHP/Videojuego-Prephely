@@ -19,11 +19,11 @@ public class colliderPies : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        movimientosPrephely.puedoSaltar = true;
+        movimientosPrephely.saltarDisponible = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        movimientosPrephely.puedoSaltar = false;
+        movimientosPrephely.saltarDisponible = false;
     }
 }
