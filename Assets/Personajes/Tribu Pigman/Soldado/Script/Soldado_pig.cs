@@ -50,7 +50,7 @@ public class Soldado_pig : MonoBehaviour
         }
         else
         {
-            if(Vector3.Distance(transform.position, target.transform.position)>3&& !atacar)
+            if(Vector3.Distance(transform.position, target.transform.position)>1.2 && !atacar)
             {
                 anim_soldado.SetBool("atacar", false);
                 atacar = false;
