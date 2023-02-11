@@ -43,6 +43,13 @@ public class movimientos : MonoBehaviour
                 animador.SetBool("Salto", true);
                 rigidBody.AddForce(new Vector3(0, fuerzaDeSalto, 0), ForceMode.Impulse);
             }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                animador.SetBool("Atacar", true);
+                Invoke("dejarAtacar", 1);
+            }
+
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 animador.SetBool("agachado", true);
@@ -64,5 +71,10 @@ public class movimientos : MonoBehaviour
     {
         animador.SetBool("Toco suelo", false);
         animador.SetBool("Salto", false);
+    }
+
+    void dejarAtacar ()
+    {
+        animador.SetBool("Atacar", false);
     }
 }
