@@ -7,16 +7,15 @@ public class movimientosSubjefePigman : MonoBehaviour
 {
     private logicaManosSubjefePigman logicaManos;
     private logicaRoca logicaRoca;
-    public float cronometro;
+    public float tiempoDeGuardia;
     public float cronometro2;
-    public float cronometro3;
     public bool ataco = false;
     private Animator animator;
     public Quaternion angulo;
     public float grado;
     private GameObject objetivo;
     private GameObject roca;
-    private Vector3 velocidadRoca;
+    private float velocidadRoca;
     private int direccionGuardia;
     void Start()
     {
@@ -25,17 +24,16 @@ public class movimientosSubjefePigman : MonoBehaviour
         animator = GetComponent<Animator>();
         objetivo=GameObject.Find("Prephely");
         roca = GameObject.Find("Roca");
-        direccionGuardia = 1;
+        direccionGuardia = 0;
     }
 
     void Update()
     {
-        velocidadRoca = roca.GetComponent<Rigidbody>().velocity;
+        velocidadRoca = roca.GetComponent<Rigidbody>().velocity.magnitude;
 
-        if (Vector3.Distance(transform.position, objetivo.transform.position) >=35)
+        if (Vector3.Distance(transform.position, objetivo.transform.position) >=35) //Saber si está a 35 unidades de Prephely
         {
             cronometro2 = 0;
-            cronometro3= 0;
             animator.SetBool("atacar", false);
             hacerGuardia();
 
@@ -57,12 +55,13 @@ public class movimientosSubjefePigman : MonoBehaviour
                 cronometro2 = 0;
             }
 
-            if (ataco && velocidadRoca.Equals(new Vector3(0, 0, 0)) && logicaRoca.rocaClonada)
+            if (ataco && logicaRoca.rocaFueClonada == true)
             {
-                Instantiate(roca);
                 animator.SetBool("atacar", false);
                 ataco = false;
-                logicaRoca.rocaClonada = false;
+                cronometro2 = 0;
+                logicaRoca.rocaFueClonada = false;
+                logicaRoca.clonacion = false;
             }
         }
         else
@@ -72,14 +71,14 @@ public class movimientosSubjefePigman : MonoBehaviour
     }
     void hacerGuardia()
     {
-        cronometro += 1 * Time.deltaTime;
+        tiempoDeGuardia += 1 * Time.deltaTime;
 
-        if (cronometro >= 8)
+        if (tiempoDeGuardia >= 8)
         {
             angulo = Quaternion.Euler(0, 180 * direccionGuardia, 0);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, angulo, 0.5f);
 
-            if (cronometro >= 9.5f)
+            if (tiempoDeGuardia >= 9.5f)
             {
                 if (direccionGuardia == 1)
                 {
@@ -90,12 +89,12 @@ public class movimientosSubjefePigman : MonoBehaviour
                     direccionGuardia = 1;
                 }
 
-                cronometro = 0;
+                tiempoDeGuardia = 0;
             }
         }
         else
         {
-            transform.Translate(0, 0, 2 * Time.deltaTime);
+            transform.Translate(0, 0, 3 * Time.deltaTime);
             animator.SetBool("caminar", true);
         }
     }

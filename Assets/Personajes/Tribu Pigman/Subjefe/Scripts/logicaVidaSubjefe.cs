@@ -2,16 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class logicaVidaSubjefe : MonoBehaviour
 {
     public Animator animador;
     public int vidaSubjefe = 1000;
+    public Image barraVida;
     void Update()
     {
-        if(vidaSubjefe < 500)
+        if(vidaSubjefe <= 0)
         {
-            Debug.Log("Menos");
+            animador.Play("Morir");
+            Invoke("pararJuego", 3f);
         }
     }
     private void OnTriggerEnter(Collider objeto)
@@ -19,12 +22,12 @@ public class logicaVidaSubjefe : MonoBehaviour
         if (objeto.gameObject.CompareTag("Espada"))
         {
             vidaSubjefe -= 10;
-            animador.SetBool("atacado", true);
-            Invoke("pararAtacado", 1);
+            barraVida.fillAmount -= 0.01f;
+            animador.Play("ReaccionarAtaque");
         }
     }
-    void pararAtacado()
+    void pararJuego()
     {
-        animador.SetBool("atacado", false);
+        Time.timeScale = 0;
     }
 }
