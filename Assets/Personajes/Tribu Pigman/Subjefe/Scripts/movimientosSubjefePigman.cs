@@ -17,6 +17,9 @@ public class movimientosSubjefePigman : MonoBehaviour
     private GameObject roca;
     private float velocidadRoca;
     private int direccionGuardia;
+    private AudioSource sonidosSubjefe;
+    public AudioClip sonidoLanzarRoca;
+    public AudioClip sonidoInvocar;
     void Start()
     {
         logicaManos = FindObjectOfType<logicaManosSubjefePigman>();
@@ -25,6 +28,7 @@ public class movimientosSubjefePigman : MonoBehaviour
         objetivo=GameObject.Find("Prephely");
         roca = GameObject.Find("Roca");
         direccionGuardia = 0;
+        sonidosSubjefe = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -50,6 +54,7 @@ public class movimientosSubjefePigman : MonoBehaviour
             if (!ataco && cronometro2 >= 0.5f)
             {
                 animator.SetBool("atacar", true);
+                sonidosSubjefe.PlayOneShot(sonidoLanzarRoca);
                 Invoke("tirarPiedra", 0.4f);
                 ataco = true;
                 cronometro2 = 0;
@@ -66,6 +71,7 @@ public class movimientosSubjefePigman : MonoBehaviour
         }
         else
         {
+            sonidosSubjefe.PlayOneShot(sonidoInvocar);
             animator.SetBool("invocar", true);
         }
     }

@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu_Inicial/Menu_Inicial.unity
     guid: 8bf0dc10488a8c84b85dd377ee92c588
   - enabled: 1
+    path: Assets/Scenes/menuPrincipal/Esc.JefeFinal.unity
+    guid: 6ba5288cfb39a7448b987fa1c1ee4914
+  - enabled: 1
+    path: Assets/Scenes/menuPrincipal/escenaSubjefePigman.unity
+    guid: 94ff1b53a0397ca49aae0f42a42a25ee
+  - enabled: 1
     path: Assets/Scenes/menuPrincipal/menuPrincipal.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    guid: 993b527531d171849b734a34ee2953e5
   m_configObjects: {}
