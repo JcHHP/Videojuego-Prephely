@@ -9,11 +9,18 @@ public class logicaVidaSubjefe : MonoBehaviour
     public Animator animador;
     public int vidaSubjefe = 1000;
     public Image barraVida;
+    private AudioSource sonidos;
+    public AudioClip sonidoMuerte;
+    private void Start()
+    {
+        sonidos = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if(vidaSubjefe <= 0)
         {
             animador.Play("Morir");
+            //sonidos.PlayOneShot(sonidoMuerte);
             Invoke("pararJuego", 3f);
         }
     }
@@ -29,5 +36,6 @@ public class logicaVidaSubjefe : MonoBehaviour
     void pararJuego()
     {
         Time.timeScale = 0;
+        sonidos.Stop();
     }
 }
