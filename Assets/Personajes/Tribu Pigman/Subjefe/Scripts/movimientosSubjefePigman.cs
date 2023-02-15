@@ -20,6 +20,7 @@ public class movimientosSubjefePigman : MonoBehaviour
     private AudioSource sonidosSubjefe;
     public AudioClip sonidoLanzarRoca;
     public AudioClip sonidoInvocar;
+    public GameObject pregunta;
     void Start()
     {
         logicaManos = FindObjectOfType<logicaManosSubjefePigman>();
@@ -73,6 +74,8 @@ public class movimientosSubjefePigman : MonoBehaviour
         {
             sonidosSubjefe.PlayOneShot(sonidoInvocar);
             animator.SetBool("invocar", true);
+            pregunta.gameObject.SetActive(true);
+
         }
     }
     void hacerGuardia()
@@ -102,6 +105,7 @@ public class movimientosSubjefePigman : MonoBehaviour
         {
             transform.Translate(0, 0, 3 * Time.deltaTime);
             animator.SetBool("caminar", true);
+     
         }
     }
     void tirarPiedra() 
