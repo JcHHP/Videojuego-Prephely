@@ -50,7 +50,7 @@ public class Soldado_pig : MonoBehaviour
         }
         else
         {
-            if(Vector3.Distance(transform.position, target.transform.position)>1.2 && !atacar)
+            if(Vector3.Distance(transform.position, target.transform.position)>0.5 && !atacar)
             {
                 anim_soldado.SetBool("atacar", false);
                 atacar = false;
@@ -65,10 +65,15 @@ public class Soldado_pig : MonoBehaviour
             }
             else
             {
+                var lookPos = target.transform.position - transform.position;
+                lookPos.y = 0;
+                var rotation = Quaternion.LookRotation(lookPos);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
                 anim_soldado.SetBool("caminar", false);
                 anim_soldado.SetBool("correr", false);
                 anim_soldado.SetBool("atacar", true);
                 atacar = true;
+
             }
             
         }
@@ -79,9 +84,13 @@ public class Soldado_pig : MonoBehaviour
     {
         comportamiento();
 
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            anim_soldado.SetBool("muere", true);
-        }
+        //if (Input.GetKeyDown(KeyCode.X))
+        //{
+        //    morir();
+        //}
     }
+    //public void morir()
+    //{
+    //    anim_soldado.SetBool("muere", true);
+    //}
 }
