@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class logicaVidaPrephely : MonoBehaviour
 {
-    public int vidaPrephely = 100;
+    //public int vidaPrephely = 100;
+    public int vidMaxPrephely=100; //1
+    public float vidaPrephely; //2
     public Animator animador;
     private CapsuleCollider capsCollider;
     public Image barraDeVida;
     private void Start()
     {
+        vidaPrephely = vidMaxPrephely; //3
         capsCollider= GetComponent<CapsuleCollider>();
         animador = GetComponent<Animator>();
     }
@@ -32,4 +35,15 @@ public class logicaVidaPrephely : MonoBehaviour
     {
         Time.timeScale = 0;
     }
+
+    public void OnTriggerEnter(Collider objeto) //4
+    {
+        if (objeto.gameObject.CompareTag("Lanza"))
+        {
+            vidaPrephely-= 0.2f;
+            barraDeVida.fillAmount = vidaPrephely / vidMaxPrephely;
+        }
+    }
+
+    
 }

@@ -10,6 +10,11 @@ public class Logica_vida_pigman : MonoBehaviour
     public float vidaActualSolpig;
     public Image imgBarraVida;
     public Animator anim_soldado;
+    public GameObject objetoASoltar;
+    public GameObject Corazon;
+    public bool objetoYaInstanciado = false;
+    public bool objetoYaInstanciado2 = false;
+    public float probabilidadDeSoltar = 0.5f;
 
 
     void Start()
@@ -27,7 +32,9 @@ public class Logica_vida_pigman : MonoBehaviour
         {
             //gameObject.SetActive(false);
             anim_soldado.SetBool("muere", true);
-            Invoke("desactivar",3f);
+            Invoke("desactivar",4f);
+            Invoke("SoltarPergamino", 4f);
+            Invoke("SoltarCorazon", 4f);
         }
     }
 
@@ -39,5 +46,36 @@ public class Logica_vida_pigman : MonoBehaviour
     public void desactivar()
     {
         gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider objeto)
+    {
+        if (objeto.gameObject.CompareTag("Espada"))
+        {
+            vidaActualSolpig -= 2.5f;
+            imgBarraVida.fillAmount = vidaActualSolpig / vidMaxSoldadoPig;
+        }
+    }
+
+    public void SoltarPergamino()
+    {
+        
+        if (!objetoYaInstanciado)
+        {
+            GameObject objeto = Instantiate(objetoASoltar, transform.position, Quaternion.identity);
+            Rigidbody objetoRb = objeto.GetComponent<Rigidbody>();
+            objetoRb.AddForce(Random.insideUnitSphere * 5, ForceMode.Impulse);
+            objetoYaInstanciado = true;
+        }
+    }
+
+    public void SoltarCorazon()
+    {
+    
+        if (!objetoYaInstanciado2 && Random.Range(0f, 1f) <= probabilidadDeSoltar)
+        {
+            Instantiate(Corazon, transform.position, transform.rotation);
+            objetoYaInstanciado2 = true;
+        }
     }
 }
