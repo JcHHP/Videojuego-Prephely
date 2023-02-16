@@ -10,6 +10,8 @@ TagManager:
   - Roca
   - Espada
   - Lanza
+  - Corazon
+  - Pergamino
   layers:
   - Default
   - TransparentFX

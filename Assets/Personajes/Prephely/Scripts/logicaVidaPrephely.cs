@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,10 +41,21 @@ public class logicaVidaPrephely : MonoBehaviour
     {
         if (objeto.gameObject.CompareTag("Lanza"))
         {
-            vidaPrephely-= 0.2f;
+            vidaPrephely-= 0.25f;
             barraDeVida.fillAmount = vidaPrephely / vidMaxPrephely;
+        }
+        
+    }
+    public void OnCollisionEnter(Collision objeto)
+    {
+        if (objeto.gameObject.CompareTag("Corazon"))
+        {
+
+            vidaPrephely += 5f;
+            barraDeVida.fillAmount = vidaPrephely / vidMaxPrephely;
+            Destroy(objeto.gameObject);
         }
     }
 
-    
+
 }

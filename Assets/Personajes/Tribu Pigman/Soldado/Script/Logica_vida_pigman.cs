@@ -12,9 +12,9 @@ public class Logica_vida_pigman : MonoBehaviour
     public Animator anim_soldado;
     public GameObject objetoASoltar;
     public GameObject Corazon;
-    public bool objetoYaInstanciado = false;
-    public bool objetoYaInstanciado2 = false;
-    public float probabilidadDeSoltar = 0.5f;
+    private bool objetoYaInstanciado = false;
+    private bool objetoYaInstanciado2 = false;
+    private int probabilidadDeSoltar = 2;
 
 
     void Start()
@@ -72,7 +72,7 @@ public class Logica_vida_pigman : MonoBehaviour
     public void SoltarCorazon()
     {
     
-        if (!objetoYaInstanciado2 && Random.Range(0f, 1f) <= probabilidadDeSoltar)
+        if (!objetoYaInstanciado2 && Random.Range(1, 5) == probabilidadDeSoltar)
         {
             Instantiate(Corazon, transform.position, transform.rotation);
             objetoYaInstanciado2 = true;
