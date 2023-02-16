@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JEFE_PREGUNTA : MonoBehaviour
 {
-    public GameObject Pregunta;
+    public Canvas Pregunta;
     
     public Animator animacion_cerdonio;
   //para el grado de rotación
@@ -15,26 +15,26 @@ public class JEFE_PREGUNTA : MonoBehaviour
         animacion_cerdonio.GetComponent<Animator>();
         buscar_prephely = GameObject.Find("Prephely");
     }
-
-
     public void comportamiento()
     {
 
 
-        //Si la distancia del jugador es mayor a 4
-        if (Vector3.Distance(transform.position, buscar_prephely.transform.position) >= 4)
-        {
-            //que no corra,y no ataque sea falso 
+     if (Vector3.Distance(transform.position, buscar_prephely.transform.position) <= 20)
+            {
+       
+            animacion_cerdonio.SetBool("sentado_pararse", true);
             animacion_cerdonio.SetBool("lanzar_pregunta", false);
+            //  Pregunta.SetActive(true);
         }
-
-        else if (Vector3.Distance(transform.position, buscar_prephely.transform.position) <= 6)
+    if (Vector3.Distance(transform.position, buscar_prephely.transform.position) <= 6)
         {
-            animacion_cerdonio.SetBool("lanzar_pregunta", true);
-          //  Pregunta.SetActive(true);
-        }
-
+            animacion_cerdonio.SetBool("lanzar_pregunta", true );
+           
+        } 
     }
+
+
+
 
 
     // Update is called once per frame
