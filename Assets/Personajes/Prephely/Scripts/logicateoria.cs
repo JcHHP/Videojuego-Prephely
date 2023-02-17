@@ -8,6 +8,7 @@ public class logicateoria : MonoBehaviour
     public Image barraDeTeoria;
     public int TeoriaMax=3; 
     public float Teoria;
+    public GameObject cerca;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class logicateoria : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        desbloquearCerca();
         RevisarTeoria();
     }
 
@@ -33,5 +35,11 @@ public class logicateoria : MonoBehaviour
             Destroy(objeto.gameObject);
         }
     }
-
+    void desbloquearCerca()
+    {
+        if(Teoria == TeoriaMax)
+        {
+            cerca.SetActive(false);
+        }
+    }
 }

@@ -20,7 +20,6 @@ public class movimientosSubjefePigman : MonoBehaviour
     private AudioSource sonidosSubjefe;
     public AudioClip sonidoLanzarRoca;
     public AudioClip sonidoInvocar;
-    public GameObject pregunta;
     void Start()
     {
         logicaManos = FindObjectOfType<logicaManosSubjefePigman>();
@@ -74,20 +73,18 @@ public class movimientosSubjefePigman : MonoBehaviour
         {
             sonidosSubjefe.PlayOneShot(sonidoInvocar);
             animator.SetBool("invocar", true);
-            pregunta.gameObject.SetActive(true);
-
         }
     }
     void hacerGuardia()
     {
         tiempoDeGuardia += 1 * Time.deltaTime;
 
-        if (tiempoDeGuardia >= 8)
+        if (tiempoDeGuardia >= 3)
         {
             angulo = Quaternion.Euler(0, 180 * direccionGuardia, 0);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, angulo, 0.5f);
 
-            if (tiempoDeGuardia >= 9.5f)
+            if (tiempoDeGuardia >= 4.5f)
             {
                 if (direccionGuardia == 1)
                 {
@@ -105,7 +102,6 @@ public class movimientosSubjefePigman : MonoBehaviour
         {
             transform.Translate(0, 0, 3 * Time.deltaTime);
             animator.SetBool("caminar", true);
-     
         }
     }
     void tirarPiedra() 

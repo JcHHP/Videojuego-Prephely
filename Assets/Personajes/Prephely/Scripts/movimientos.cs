@@ -15,6 +15,10 @@ public class movimientos : MonoBehaviour
 
     public float velInicial;
     public float velAgachado;
+
+    private AudioSource audios;
+    public AudioClip sonidoCaminar;
+    public AudioClip sonidoAtacar;
     void Start()
     {
         saltarDisponible = false;
@@ -22,11 +26,13 @@ public class movimientos : MonoBehaviour
 
         velInicial = velocidadMovimiento;
         velAgachado = velocidadMovimiento * 0.5f;
+
+        audios = GetComponent<AudioSource>();
     }
     void FixedUpdate()
     {
         transform.Rotate(0, x * Time.deltaTime * velocidadRotacion, 0);
-        transform.Translate(0, 0, y * Time.deltaTime * velocidadMovimiento);
+        transform.Translate(0, 0, y * Time.deltaTime * velocidadMovimiento);       
     }
     void Update()
     {
@@ -47,6 +53,7 @@ public class movimientos : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 animador.SetBool("Atacar", true);
+                Invoke("reproducirSonidoAtacar", 0.5f);
                 Invoke("dejarAtacar", 1);
             }
 
@@ -76,5 +83,9 @@ public class movimientos : MonoBehaviour
     void dejarAtacar ()
     {
         animador.SetBool("Atacar", false);
+    }
+    void reproducirSonidoAtacar()
+    {
+        audios.PlayOneShot(sonidoAtacar);
     }
 }

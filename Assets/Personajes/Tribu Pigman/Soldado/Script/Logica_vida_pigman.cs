@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Logica_vida_pigman : MonoBehaviour
 {
-
     public int vidMaxSoldadoPig;
     public float vidaActualSolpig;
     public Image imgBarraVida;
@@ -15,12 +14,14 @@ public class Logica_vida_pigman : MonoBehaviour
     private bool objetoYaInstanciado = false;
     private bool objetoYaInstanciado2 = false;
     private int probabilidadDeSoltar = 2;
-
+    private AudioSource audios;
+    public AudioClip soltarBonus;
 
     void Start()
     {
         vidMaxSoldadoPig = 50;
         vidaActualSolpig = vidMaxSoldadoPig;  //Cuando empieze el juego la vida = vida máxima
+        audios= GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,7 +33,7 @@ public class Logica_vida_pigman : MonoBehaviour
         {
             //gameObject.SetActive(false);
             anim_soldado.SetBool("muere", true);
-            Invoke("desactivar",4f);
+            Invoke("desactivar",5f);
             Invoke("SoltarPergamino", 4f);
             Invoke("SoltarCorazon", 4f);
         }
@@ -62,9 +63,10 @@ public class Logica_vida_pigman : MonoBehaviour
         
         if (!objetoYaInstanciado)
         {
+            audios.PlayOneShot(soltarBonus);
             GameObject objeto = Instantiate(objetoASoltar, transform.position, Quaternion.identity);
             Rigidbody objetoRb = objeto.GetComponent<Rigidbody>();
-            objetoRb.AddForce(Random.insideUnitSphere * 5, ForceMode.Impulse);
+            objetoRb.AddForce(Random.insideUnitSphere, ForceMode.Impulse);
             objetoYaInstanciado = true;
         }
     }

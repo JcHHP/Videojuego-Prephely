@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class logicaVidaSubjefe : MonoBehaviour
 {
     public Animator animador;
-    public int vidaSubjefe = 1000;
+    public int vidaSubjefe = 500;
     public Image barraVida;
     private AudioSource sonidos;
     public AudioClip sonidoMuerte;
