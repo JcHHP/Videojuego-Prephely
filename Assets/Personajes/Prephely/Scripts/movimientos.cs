@@ -21,6 +21,8 @@ public class movimientos : MonoBehaviour
     public AudioClip sonidoAtacar;
     void Start()
     {
+        velocidadMovimiento = 5.0f;
+        velocidadRotacion = 200.0f;
         saltarDisponible = false;
         animador = GetComponent<Animator>();
 
