@@ -26,22 +26,22 @@ public class Soldado_pig : MonoBehaviour
             anim_soldado.SetBool("atacar", false);
             atacar= false;
             cronometro += 1 * Time.deltaTime;
-            if (cronometro >= 4)
+            if (cronometro >= 7)
             {
-                rutina = Random.Range(0, 2);
+                rutina = Random.Range(0, 1);
                 cronometro = 0;
             }
             switch (rutina)
             {
-                case 0:
+                /*case 0:
                     anim_soldado.SetBool("caminar", false);
-                    break;
-                case 1:
+                    break;*/
+                case 0:
                     grado = Random.Range(0, 360);
                     angulo = Quaternion.Euler(0, grado, 0);
                     rutina++;
                     break;
-                case 2:
+                case 1:
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, angulo, 0.5f);
                     transform.Translate(Vector3.forward * 1 * Time.deltaTime);
                     anim_soldado.SetBool("caminar", true);

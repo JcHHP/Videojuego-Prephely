@@ -16,6 +16,8 @@ public class movimientos : MonoBehaviour
     public float velInicial;
     public float velAgachado;
 
+    public GameObject Espada;
+
     private AudioSource audios;
     public AudioClip sonidoCaminar;
     public AudioClip sonidoAtacar;
@@ -27,6 +29,7 @@ public class movimientos : MonoBehaviour
         velInicial = velocidadMovimiento;
         velAgachado = velocidadMovimiento * 0.5f;
 
+        Espada.GetComponent<BoxCollider>().enabled = false;
         audios = GetComponent<AudioSource>();
     }
     void FixedUpdate()
@@ -87,5 +90,15 @@ public class movimientos : MonoBehaviour
     void reproducirSonidoAtacar()
     {
         audios.PlayOneShot(sonidoAtacar);
+    }
+
+    void activarColliderEspada()
+    {
+        Espada.GetComponent<BoxCollider>().enabled = true;
+    }
+
+    void desactivarCollider()
+    {
+        Espada.GetComponent<BoxCollider>().enabled = false;
     }
 }
