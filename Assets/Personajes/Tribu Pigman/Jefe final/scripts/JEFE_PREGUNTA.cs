@@ -16,6 +16,7 @@ public class JEFE_PREGUNTA : MonoBehaviour
     {
         animacion_cerdonio.GetComponent<Animator>();
         buscar_prephely = GameObject.Find("Prephely");
+        sonidojefe = GetComponent<AudioSource>();
     }
     public void comportamiento()
     {
@@ -26,7 +27,7 @@ public class JEFE_PREGUNTA : MonoBehaviour
        
             animacion_cerdonio.SetBool("sentado_pararse", true);
             animacion_cerdonio.SetBool("lanzar_pregunta", false);
-            //sonidojefe.PlayOneShot(sonidoPigman);
+            sonidojefe.PlayOneShot(sonidoPigman);
 
         }
     if (Vector3.Distance(transform.position, buscar_prephely.transform.position) <= 6)
