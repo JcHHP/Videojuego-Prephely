@@ -70,12 +70,12 @@ public class Soldado_pig : MonoBehaviour
                 var rotation = Quaternion.LookRotation(lookPos);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
                 transform.Translate(Vector3.forward * 1 * Time.deltaTime);
-                anim_soldado.SetBool("caminar", false);
+                anim_soldado.SetBool("caminar", true);
                 anim_soldado.SetBool("correr", false);
-                anim_soldado.SetBool("atacar", true);
+                //anim_soldado.SetBool("atacar", true);
                 atacar = true;
-                //Invoke("Ataque",0.5f);
-                //Invoke("NoAtaque",0.3f);
+                Invoke("Ataque",0.3f);
+                Invoke("NoAtaque",0.25f);
 
             }
             
@@ -97,11 +97,12 @@ public class Soldado_pig : MonoBehaviour
     void NoAtaque()
     {
         anim_soldado.SetBool("atacar", false);
-        
+
     }
     void Ataque()
     {
         anim_soldado.SetBool("atacar", true);
 
     }
+
 }
