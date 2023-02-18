@@ -41,7 +41,8 @@ public class logicaVidaPrephely : MonoBehaviour
     {
         if (objeto.gameObject.CompareTag("Lanza"))
         {
-            vidaPrephely-= 0.25f;
+            animador.Play("Recibe golpe");
+            vidaPrephely -= 0.25f;
             barraDeVida.fillAmount = vidaPrephely / vidMaxPrephely;
         }
         

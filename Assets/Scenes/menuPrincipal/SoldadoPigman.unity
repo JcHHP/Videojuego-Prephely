@@ -1513,7 +1513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cf882fc7c569144e89c41ca4476e93b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cf882fc7c569144e89c41ca4476e93b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1664,6 +1664,9 @@ MonoBehaviour:
   saltarDisponible: 0
   velInicial: 0
   velAgachado: 0
+  Espada: {fileID: 0}
+  sonidoCaminar: {fileID: 0}
+  sonidoAtacar: {fileID: 0}
 --- !u!95 &1558796388
 Animator:
   serializedVersion: 4
@@ -1734,6 +1737,7 @@ MonoBehaviour:
   barraDeTeoria: {fileID: 243428786}
   TeoriaMax: 3
   Teoria: 0
+  cerca: {fileID: 0}
 --- !u!4 &1559789513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1852576806548013000, guid: 9cf882fc7c569144e89c41ca4476e93b, type: 3}
@@ -1820,8 +1824,10 @@ MonoBehaviour:
   vidaActualSolpig: 0
   imgBarraVida: {fileID: 120240420}
   anim_soldado: {fileID: 1581484565}
+  lanza: {fileID: 0}
   objetoASoltar: {fileID: 18632744}
   Corazon: {fileID: 2007803516}
+  soltarBonus: {fileID: 0}
 --- !u!1 &1736254322 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b25c0af7ec75d2e44b206bc193cc9e20, type: 3}

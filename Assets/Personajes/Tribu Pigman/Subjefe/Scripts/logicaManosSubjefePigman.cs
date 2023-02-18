@@ -19,6 +19,6 @@ public class logicaManosSubjefePigman : MonoBehaviour
     {
         piedra.transform.SetParent(null);
         piedra.GetComponent<Rigidbody>().isKinematic = false;
-        piedra.GetComponent<Rigidbody>().AddForce(direccionCuerpo.forward * 45, ForceMode.Impulse);
+        piedra.GetComponent<Rigidbody>().AddForce(direccionCuerpo.forward * 35, ForceMode.Impulse);
     }
 }

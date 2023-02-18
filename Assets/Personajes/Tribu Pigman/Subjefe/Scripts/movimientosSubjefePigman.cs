@@ -20,6 +20,7 @@ public class movimientosSubjefePigman : MonoBehaviour
     private AudioSource sonidosSubjefe;
     public AudioClip sonidoLanzarRoca;
     public AudioClip sonidoInvocar;
+    private bool invocarReproducido = false;
     void Start()
     {
         logicaManos = FindObjectOfType<logicaManosSubjefePigman>();
@@ -35,13 +36,13 @@ public class movimientosSubjefePigman : MonoBehaviour
     {
         velocidadRoca = roca.GetComponent<Rigidbody>().velocity.magnitude;
 
-        if (Vector3.Distance(transform.position, objetivo.transform.position) >=35) //Saber si está a 35 unidades de Prephely
+        if (Vector3.Distance(transform.position, objetivo.transform.position) >=60) //Saber si está a 60 unidades de Prephely
         {
             cronometro2 = 0;
             animator.SetBool("atacar", false);
             hacerGuardia();
 
-        }else if (Vector3.Distance(transform.position, objetivo.transform.position) >= 10)
+        }else if (Vector3.Distance(transform.position, objetivo.transform.position) >= 7)
         {
             animator.SetBool("invocar", false);
             var lookPos = objetivo.transform.position - transform.position;
@@ -71,8 +72,15 @@ public class movimientosSubjefePigman : MonoBehaviour
         }
         else
         {
-            sonidosSubjefe.PlayOneShot(sonidoInvocar);
-            animator.SetBool("invocar", true);
+            if (!invocarReproducido)
+            {
+                sonidosSubjefe.Pause();
+                sonidosSubjefe.PlayOneShot(sonidoInvocar);
+                animator.Play("Invocar");
+
+                invocarReproducido= true;
+                Invoke("congelarTiempo", 2f);
+            }
         }
     }
     void hacerGuardia()
@@ -107,5 +115,10 @@ public class movimientosSubjefePigman : MonoBehaviour
     void tirarPiedra() 
     {
         logicaManos.agarraPiedra(objetivo);
+    }
+
+    void congelarTiempo()
+    {
+        Time.timeScale = 0;
     }
 }
