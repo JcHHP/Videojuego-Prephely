@@ -5,7 +5,9 @@ using UnityEngine;
 public class JEFE_PREGUNTA : MonoBehaviour
 {
     public Canvas Pregunta;
-    
+    private AudioSource sonidojefe;
+    public AudioClip sonidoPigman;
+
     public Animator animacion_cerdonio;
   //para el grado de rotación
     public GameObject buscar_prephely;
@@ -24,7 +26,8 @@ public class JEFE_PREGUNTA : MonoBehaviour
        
             animacion_cerdonio.SetBool("sentado_pararse", true);
             animacion_cerdonio.SetBool("lanzar_pregunta", false);
-            //  Pregunta.SetActive(true);
+            //sonidojefe.PlayOneShot(sonidoPigman);
+
         }
     if (Vector3.Distance(transform.position, buscar_prephely.transform.position) <= 6)
         {
