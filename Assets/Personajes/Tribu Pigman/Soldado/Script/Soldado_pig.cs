@@ -20,7 +20,7 @@ public class Soldado_pig : MonoBehaviour
 
     public void comportamiento()
     {
-        if (Vector3.Distance(transform.position, target.transform.position) > 7)
+        if (Vector3.Distance(transform.position, target.transform.position) > 15)
         {
             anim_soldado.SetBool("correr", false);
             anim_soldado.SetBool("atacar", false);
@@ -50,7 +50,7 @@ public class Soldado_pig : MonoBehaviour
         }
         else
         {
-            if(Vector3.Distance(transform.position, target.transform.position)>2 && !atacar)
+            if(Vector3.Distance(transform.position, target.transform.position)>0.5 && !atacar)
             {
                 anim_soldado.SetBool("atacar", false);
                 atacar = false;
@@ -63,18 +63,22 @@ public class Soldado_pig : MonoBehaviour
                 transform.Translate(Vector3.forward * 3 * Time.deltaTime);
                 anim_soldado.SetBool("atacar", false);
             }
-            else
+            else //if(Vector3.Distance(transform.position, target.transform.position) < 0.5)
             {
                 var lookPos = target.transform.position - transform.position;
                 lookPos.y = 0;
                 var rotation = Quaternion.LookRotation(lookPos);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
+                transform.Translate(Vector3.forward * 1 * Time.deltaTime);
                 anim_soldado.SetBool("caminar", false);
                 anim_soldado.SetBool("correr", false);
                 anim_soldado.SetBool("atacar", true);
                 atacar = true;
+                //Invoke("Ataque",0.5f);
+                //Invoke("NoAtaque",0.3f);
 
             }
+            
             
         }
         
@@ -89,8 +93,15 @@ public class Soldado_pig : MonoBehaviour
         //    morir();
         //}
     }
-    //public void morir()
-    //{
-    //    anim_soldado.SetBool("muere", true);
-    //}
+
+    void NoAtaque()
+    {
+        anim_soldado.SetBool("atacar", false);
+        
+    }
+    void Ataque()
+    {
+        anim_soldado.SetBool("atacar", true);
+
+    }
 }

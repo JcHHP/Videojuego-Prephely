@@ -14,7 +14,7 @@ public class Logica_vida_pigman : MonoBehaviour
     public GameObject Corazon;
     private bool objetoYaInstanciado = false;
     private bool objetoYaInstanciado2 = false;
-    private int probabilidadDeSoltar = 2;
+    private int probabilidadDeSoltar = 3;
     private AudioSource audios;
     public AudioClip soltarBonus;
 
@@ -79,7 +79,9 @@ public class Logica_vida_pigman : MonoBehaviour
     
         if (!objetoYaInstanciado2 && Random.Range(1, 5) == probabilidadDeSoltar)
         {
-            Instantiate(Corazon, new Vector3(transform.position.x, transform.position.y + 1), transform.rotation);
+            Instantiate(Corazon, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
+            Rigidbody objetoRb = Corazon.GetComponent<Rigidbody>();
+            objetoRb.AddForce(new Vector3(3, 7, 3), ForceMode.Impulse);
             objetoYaInstanciado2 = true;
         }
     }
