@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Taruca_movimientos : MonoBehaviour
+public class taruca_movimientos : MonoBehaviour
 {
-    public Canvas Pregunta;
+
+
+
+    private AudioSource sonidojefe;
+    public AudioClip sonidoTaruca;
+    public AudioClip aparecerPreguntaTaruca;
 
     public Animator animacion_taruca;
 
@@ -14,32 +19,37 @@ public class Taruca_movimientos : MonoBehaviour
     {
         animacion_taruca.GetComponent<Animator>();
         buscar_prephely = GameObject.Find("Prephely");
+        sonidojefe = GetComponent<AudioSource>();
     }
     public void comportamiento()
     {
-
-
         if (Vector3.Distance(transform.position, buscar_prephely.transform.position) <= 20)
         {
 
-            animacion_taruca.SetBool("sentada_pararse", true);
+            animacion_taruca.SetBool("sentado_pararse", true);
             animacion_taruca.SetBool("lanzar_pregunta", false);
-        }
+            sonidojefe.PlayOneShot(sonidoTaruca);
 
+        }
 
 
         if (Vector3.Distance(transform.position, buscar_prephely.transform.position) <= 6)
         {
-           animacion_taruca.SetBool("lanzar_pregunta", true);
+            animacion_taruca.SetBool("lanzar_pregunta", true);
 
 
-            //Aparecer preguntas
-            //Pregunta.SetActive(true);
+            sonidojefe.Pause();
+            //sonidojefe.PlayOneShot(aparecerPreguntaPigman);
+            //Aparecer Preguntas Aqui
 
         }
     }
 
 
+
+
+
+    // Update is called once per frame
     void Update()
     {
         comportamiento();
