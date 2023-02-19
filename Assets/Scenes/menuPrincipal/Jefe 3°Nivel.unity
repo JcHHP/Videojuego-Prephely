@@ -1149,8 +1149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4dd85fbf7acb4d44b81da69cdac48e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonidoPigman: {fileID: 8300000, guid: b78140b2af6fa9941ab388359239bd75, type: 3}
-  aparecerPreguntaPigman: {fileID: 0}
+  sonidoPigman: {fileID: 0}
   animacion_allqamari: {fileID: 176255977}
   buscar_prephely: {fileID: 1558796385}
 --- !u!114 &176255982
@@ -6532,6 +6531,7 @@ MonoBehaviour:
   vidaPrephely: 100
   animador: {fileID: 1558796388}
   barraDeVida: {fileID: 117725278}
+  activarPregunta: {fileID: 0}
 --- !u!114 &1558796387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6627,6 +6627,7 @@ MonoBehaviour:
   TeoriaMax: 3
   Teoria: 0
   cerca: {fileID: 0}
+  activarPregunta: {fileID: 0}
 --- !u!82 &1558796393
 AudioSource:
   m_ObjectHideFlags: 0

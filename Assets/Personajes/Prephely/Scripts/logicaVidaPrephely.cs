@@ -14,9 +14,11 @@ public class logicaVidaPrephely : MonoBehaviour
 
     private float seg;
     public ActivadorPregunta activarPregunta;
+    public Activador2Pregunta activar2Pregunta;
     private void Start()
     {
         activarPregunta = FindObjectOfType<ActivadorPregunta>();
+        activar2Pregunta = FindObjectOfType<Activador2Pregunta>();
         vidaPrephely = vidMaxPrephely; 
         capsCollider= GetComponent<CapsuleCollider>();
         animador = GetComponent<Animator>();
@@ -31,7 +33,17 @@ public class logicaVidaPrephely : MonoBehaviour
             {
                 animador.Play("Muerte");
                 Invoke("destruirCapsulleCollider", 0.7f);
-                Invoke("VerMensajeWarning", 2f);
+                if (activarPregunta)
+                {
+                    Invoke("VerMensajeWarning", 2f);
+                }
+
+                if (activar2Pregunta)
+                {
+                    Invoke("VerMensajeWarning2", 2f);
+                }
+
+
             }
            // Invoke("pararJuego", 1.5f);
         }
@@ -70,6 +82,11 @@ public class logicaVidaPrephely : MonoBehaviour
     void VerMensajeWarning() 
     {
         activarPregunta.VerMensajeWarning();
+    }
+
+    void VerMensajeWarning2()
+    {
+        activar2Pregunta.VerMensajeWarning();
     }
 
 }

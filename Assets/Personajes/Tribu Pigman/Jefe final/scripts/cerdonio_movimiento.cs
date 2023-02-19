@@ -12,9 +12,13 @@ public class cerdonio_movimiento : MonoBehaviour
     public Animator animacion_cerdonio;
  
     public GameObject buscar_prephely;
-   
-  void Start()
+    private float seg;
+
+    public Activador2Pregunta activar2Pregunta;
+
+    void Start()
     {
+        activar2Pregunta = GetComponentInParent<Activador2Pregunta>();
         animacion_cerdonio.GetComponent<Animator>();
         buscar_prephely = GameObject.Find("Prephely");
         sonidojefe = GetComponent<AudioSource>();
@@ -23,33 +27,46 @@ public class cerdonio_movimiento : MonoBehaviour
     {
      if (Vector3.Distance(transform.position, buscar_prephely.transform.position) <= 20)
             {
-       
-            animacion_cerdonio.SetBool("sentado_pararse", true);
-            animacion_cerdonio.SetBool("lanzar_pregunta", false);
-            sonidojefe.PlayOneShot(sonidoPigman);
+                 animacion_cerdonio.SetBool("sentado_pararse", true);
+                  animacion_cerdonio.SetBool("lanzar_pregunta", false);
+                   if (GetComponent<AudioSource>().enabled)
+                    {
+                     sonidojefe.PlayOneShot(sonidoPigman);
+                    }
+           }
 
-        }
-
-
-    if (Vector3.Distance(transform.position, buscar_prephely.transform.position) <= 6)
+        if (Vector3.Distance(transform.position, buscar_prephely.transform.position) <= 6)
         {
             animacion_cerdonio.SetBool("lanzar_pregunta", true );
 
+           //  sonidojefe.Pause();
+           // Invoke(" Verpregunta", 1f);
+            if (activar2Pregunta)
+            {
+                seg += Time.deltaTime;
+                if (seg > 2)
+                {
+                    Verpregunta();
+                }
+            } 
 
-            sonidojefe.Pause();
-            //sonidojefe.PlayOneShot(aparecerPreguntaPigman);
+          //  sonidojefe.Pause();
+            //
             //Aparecer Preguntas 
+
 
         } 
     }
-
-
-
 
 
     // Update is called once per frame
     void Update()
     {
         comportamiento();
+    }
+
+    void Verpregunta()
+    {
+        activar2Pregunta.ActivarPreguntas();
     }
 }

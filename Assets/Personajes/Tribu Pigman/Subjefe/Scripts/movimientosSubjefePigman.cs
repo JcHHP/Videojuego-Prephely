@@ -99,7 +99,7 @@ public class movimientosSubjefePigman : MonoBehaviour
             Invoke("VerMensajeTriunfo", 4f);
         }
 
-       // Debug.Log(vida);
+       
     }
     void hacerGuardia()
     {
