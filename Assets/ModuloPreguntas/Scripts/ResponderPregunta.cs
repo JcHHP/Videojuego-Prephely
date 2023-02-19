@@ -6,7 +6,6 @@ public class ResponderPregunta : MonoBehaviour {
 
 	public Text canva_puntos;
     public int puntosPorRespuesta;
-	//public GameObject activadorPregunta;
 	public GameObject Pregunta;
 	public AudioClip Correcto;
     public AudioClip inCorrecto;
@@ -20,7 +19,7 @@ public class ResponderPregunta : MonoBehaviour {
     public logicaVidaPrephely VidaPrifely;
     public GameObject VidaPrifelyObj;
     public ActivadorPregunta activarPregunta;
-    // public logicateoria teoria;
+  
     public GameObject objetoCanvas;
     public int VidaEnemigo;
 
@@ -31,7 +30,7 @@ public class ResponderPregunta : MonoBehaviour {
     public static int puntos;
 
 	void Start (){
-      //  teoria = FindObjectOfType<logicateoria>();
+     
         objetoCanvas = GameObject.Find("CanvasPreguntas");
 
         activarPregunta = FindObjectOfType<ActivadorPregunta>();
@@ -45,7 +44,6 @@ public class ResponderPregunta : MonoBehaviour {
         VidaEnemigo = Subjefe.vidaSubjefe;
         botones = GetComponentInParent<Botones>();
 
-        canva_puntos.text = "puntos: " + puntos;
 
         sonido = GetComponent<AudioSource>();
 
@@ -79,7 +77,7 @@ public class ResponderPregunta : MonoBehaviour {
                 {
                     Destroy(objetoCanvas.transform.GetChild(2).gameObject);
                     contadorTeorias = 0;
-            }
+                }
             }
        
     }
@@ -97,7 +95,6 @@ public class ResponderPregunta : MonoBehaviour {
         StartCoroutine(res_correcta());
     }
 
-
     IEnumerator res_correcta(){
 
 
@@ -114,11 +111,9 @@ public class ResponderPregunta : MonoBehaviour {
         }
 
         sonido.Play();
-		canva_puntos.text = "puntos: " + puntos;
-   
+		
         botones.verifyIsPressed(false);
         yield return new WaitForSeconds (2f);
-		canva_puntos.text = "puntos: " + puntos;
        
         Destroy (Pregunta);
 	}
