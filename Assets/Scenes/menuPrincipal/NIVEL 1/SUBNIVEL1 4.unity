@@ -9167,6 +9167,10 @@ PrefabInstance:
       value: siguiente_escena, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6934203747790146942, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: SUBNIVEL1 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934203747790146942, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -13150,6 +13154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd34ef3dd2daed49b522f173f48393e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGeneral: {fileID: 0}
+  canvasCreditos: {fileID: 0}
 --- !u!1 &1263534117
 GameObject:
   m_ObjectHideFlags: 0
@@ -16043,6 +16049,7 @@ MonoBehaviour:
   animador: {fileID: 1558796388}
   barraDeVida: {fileID: 117725278}
   activarPregunta: {fileID: 0}
+  activar2Pregunta: {fileID: 0}
 --- !u!114 &1558796387
 MonoBehaviour:
   m_ObjectHideFlags: 0
