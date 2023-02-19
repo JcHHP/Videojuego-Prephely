@@ -6,15 +6,18 @@ using UnityEngine.UI;
 
 public class logicaVidaPrephely : MonoBehaviour
 {
-    //public int vidaPrephely = 100;
     public int vidMaxPrephely=100; //1
     public float vidaPrephely; //2
     public Animator animador;
     private CapsuleCollider capsCollider;
     public Image barraDeVida;
+
+    private float seg;
+    public ActivadorPregunta activarPregunta;
     private void Start()
     {
-        vidaPrephely = vidMaxPrephely; //3
+        activarPregunta = FindObjectOfType<ActivadorPregunta>();
+        vidaPrephely = vidMaxPrephely; 
         capsCollider= GetComponent<CapsuleCollider>();
         animador = GetComponent<Animator>();
     }
@@ -22,9 +25,15 @@ public class logicaVidaPrephely : MonoBehaviour
     {
         if (vidaPrephely<=0)
         {
-            animador.Play("Muerte");
-            Invoke("destruirCapsulleCollider", 0.7f);
-            Invoke("pararJuego", 1.5f);
+
+            seg += Time.deltaTime;
+            if (seg > 2)
+            {
+                animador.Play("Muerte");
+                Invoke("destruirCapsulleCollider", 0.7f);
+                Invoke("VerMensajeWarning", 2f);
+            }
+           // Invoke("pararJuego", 1.5f);
         }
     }
 
@@ -58,5 +67,9 @@ public class logicaVidaPrephely : MonoBehaviour
         }
     }
 
+    void VerMensajeWarning() 
+    {
+        activarPregunta.VerMensajeWarning();
+    }
 
 }

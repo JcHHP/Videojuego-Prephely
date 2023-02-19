@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class logicaVidaSubjefe : MonoBehaviour
+public class logicaVidaSubjefes : MonoBehaviour
 {
     public Animator animador;
     public int vidaSubjefe;
@@ -22,8 +22,9 @@ public class logicaVidaSubjefe : MonoBehaviour
         if(vidaSubjefe <= 0)
         {
             seg += Time.deltaTime;
-            if (seg > 1)
+            if (seg > 2)
             {
+                GetComponent<AudioSource>().enabled = false;
                 animador.Play("Morir");
                 //sonidos.PlayOneShot(sonidoMuerte);
                 // Invoke("pararJuego", 3f);

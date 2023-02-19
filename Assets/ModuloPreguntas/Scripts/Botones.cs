@@ -16,12 +16,12 @@ public class Botones: MonoBehaviour
             buttonsList.Add(buttons[i]);
         }
 
-       // verifyIsPressed(false);
-
+        // verifyIsPressed(false);
+        Debug.Log(buttons.Length);
     }
     private void Update()
     {
-
+        
     }
 
     public void verifyIsPressed(bool verify)

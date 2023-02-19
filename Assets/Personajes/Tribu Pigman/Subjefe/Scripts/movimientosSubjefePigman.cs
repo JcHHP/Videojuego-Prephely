@@ -20,10 +20,19 @@ public class movimientosSubjefePigman : MonoBehaviour
     private AudioSource sonidosSubjefe;
     public AudioClip sonidoLanzarRoca;
     public AudioClip sonidoInvocar;
+
+    public ActivadorPregunta activarPregunta;
+    private logicaVidaSubjefes Subjefe;
+    private int vida;
+
     private bool invocarReproducido = false;
     void Start()
     {
         logicaManos = FindObjectOfType<logicaManosSubjefePigman>();
+        activarPregunta = GetComponentInParent<ActivadorPregunta>();
+
+        Subjefe = GetComponentInParent<logicaVidaSubjefes>();
+
         logicaRoca = FindObjectOfType<logicaRoca>();
         animator = GetComponent<Animator>();
         objetivo=GameObject.Find("Prephely");
@@ -34,6 +43,7 @@ public class movimientosSubjefePigman : MonoBehaviour
 
     void Update()
     {
+        vida = Subjefe.vidaSubjefe;
         velocidadRoca = roca.GetComponent<Rigidbody>().velocity.magnitude;
 
         if (Vector3.Distance(transform.position, objetivo.transform.position) >=60) //Saber si está a 60 unidades de Prephely
@@ -72,16 +82,24 @@ public class movimientosSubjefePigman : MonoBehaviour
         }
         else
         {
+           
             if (!invocarReproducido)
             {
                 sonidosSubjefe.Pause();
                 sonidosSubjefe.PlayOneShot(sonidoInvocar);
                 animator.Play("Invocar");
 
-                invocarReproducido= true;
-                Invoke("congelarTiempo", 2f);
+                invocarReproducido = true;
+                Invoke("Verpregunta", 2f);
+                
             }
         }
+        if (vida <= 0)
+        {
+            Invoke("VerMensajeTriunfo", 4f);
+        }
+
+       // Debug.Log(vida);
     }
     void hacerGuardia()
     {
@@ -120,5 +138,15 @@ public class movimientosSubjefePigman : MonoBehaviour
     void congelarTiempo()
     {
         Time.timeScale = 0;
+    }
+
+    void Verpregunta()
+    {
+        activarPregunta.ActivarPreguntas();
+    }
+
+    void VerMensajeTriunfo()
+    {
+        activarPregunta.VerMensajeTriunfo();
     }
 }

@@ -9,9 +9,12 @@ public class logicateoria : MonoBehaviour
     public int TeoriaMax=3; 
     public float Teoria;
     public GameObject cerca;
+
+    public ActivadorPregunta activarPregunta;
     // Start is called before the first frame update
     void Start()
     {
+        activarPregunta = FindObjectOfType<ActivadorPregunta>();
         Teoria = 0;
     }
 
@@ -20,6 +23,11 @@ public class logicateoria : MonoBehaviour
     {
         desbloquearCerca();
         RevisarTeoria();
+
+        if (Teoria == 3)
+        {
+            Invoke("VerTeoria", 1f);
+        }
     }
 
     public void RevisarTeoria()
@@ -41,5 +49,10 @@ public class logicateoria : MonoBehaviour
         {
             cerca.SetActive(false);
         }
+    }
+
+    void VerTeoria()
+    {
+        activarPregunta.VerTeoria();
     }
 }
