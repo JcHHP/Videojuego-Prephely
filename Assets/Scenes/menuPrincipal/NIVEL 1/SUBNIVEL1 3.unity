@@ -8369,6 +8369,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1020288383644467207, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020288383644467207, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: inCorrecto
       value: 
       objectReference: {fileID: 8300000, guid: 40a80b13b1eb58c4280281c925f0028e, type: 3}
@@ -8865,6 +8869,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4323030507188099704, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323030507188099704, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: inCorrecto
       value: 
       objectReference: {fileID: 8300000, guid: 40a80b13b1eb58c4280281c925f0028e, type: 3}
@@ -9191,6 +9199,10 @@ PrefabInstance:
     - target: {fileID: 7026182961050923309, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056781571491426935, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7056781571491426935, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: inCorrecto
@@ -13160,6 +13172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd34ef3dd2daed49b522f173f48393e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGeneral: {fileID: 0}
+  canvasCreditos: {fileID: 0}
+  canvasOpciones: {fileID: 0}
 --- !u!1 &1263534117
 GameObject:
   m_ObjectHideFlags: 0
@@ -16053,6 +16068,7 @@ MonoBehaviour:
   animador: {fileID: 1558796388}
   barraDeVida: {fileID: 117725278}
   activarPregunta: {fileID: 0}
+  activar2Pregunta: {fileID: 0}
 --- !u!114 &1558796387
 MonoBehaviour:
   m_ObjectHideFlags: 0
