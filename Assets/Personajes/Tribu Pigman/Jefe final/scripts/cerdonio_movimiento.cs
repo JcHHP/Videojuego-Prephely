@@ -37,7 +37,7 @@ public class cerdonio_movimiento : MonoBehaviour
 
 
             sonidojefe.Pause();
-            //sonidojefe.PlayOneShot(aparecerPreguntaPigman);
+            //
             //Aparecer Preguntas 
 
         } 
