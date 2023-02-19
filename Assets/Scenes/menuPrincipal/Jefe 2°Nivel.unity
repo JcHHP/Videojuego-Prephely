@@ -6401,22 +6401,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: cc08afe1ebe7ade4f99061aa5526732e, type: 3}
   m_PrefabInstance: {fileID: 570549512}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1554076611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554076608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3415752e842f0439a7bbd994fb071c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sonidoTaruca: {fileID: 0}
-  aparecerPreguntaTaruca: {fileID: 0}
-  animacion_taruca: {fileID: 1554076609}
-  buscar_prephely: {fileID: 1558796385}
 --- !u!82 &1554076612
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6548,6 +6532,7 @@ MonoBehaviour:
   vidaPrephely: 100
   animador: {fileID: 1558796388}
   barraDeVida: {fileID: 117725278}
+  activarPregunta: {fileID: 0}
 --- !u!114 &1558796387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6643,6 +6628,7 @@ MonoBehaviour:
   TeoriaMax: 3
   Teoria: 0
   cerca: {fileID: 0}
+  activarPregunta: {fileID: 0}
 --- !u!82 &1558796393
 AudioSource:
   m_ObjectHideFlags: 0

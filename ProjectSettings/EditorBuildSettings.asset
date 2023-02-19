@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 3.unity
     guid: e7ca90e9b94f58d4eaefc5f5ab8de2a1
+  - enabled: 1
+    path: Assets/Scenes/Menu_Inicial/creditos.unity
+    guid: 29d81dd07f617a94588f467c537afdc1
   m_configObjects: {}
