@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/menuPrincipal/menuPrincipal.unity
     guid: 993b527531d171849b734a34ee2953e5
   - enabled: 1
-    path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 1.unity
+    path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1.unity
     guid: d25e7f5ac7f87b240a28e302c821f0a3
   - enabled: 1
     path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 2.unity
