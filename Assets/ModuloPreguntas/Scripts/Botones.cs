@@ -16,8 +16,6 @@ public class Botones: MonoBehaviour
             buttonsList.Add(buttons[i]);
         }
 
-        // verifyIsPressed(false);
-        Debug.Log(buttons.Length);
     }
     private void Update()
     {

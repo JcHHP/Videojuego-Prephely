@@ -117,15 +117,18 @@ public class ActivadorPregunta : MonoBehaviour {
     {
         if (hijo2)
         {
-            Prephely.GetComponent<movimientos>().enabled = false;
+           
             SubjefeObj.GetComponent<AudioSource>().enabled = false;
             for (int i = 0; i < hijo2.transform.childCount; i += 1)
             {
                 hijo2.transform.GetChild(i).gameObject.SetActive(true);
 
             }
-
-
+        }
+        else
+        {
+            SubjefeObj.GetComponent<AudioSource>().enabled = true;
+            Prephely.GetComponent<movimientos>().enabled = true;
         }
 
     }

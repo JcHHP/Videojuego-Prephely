@@ -27,6 +27,7 @@ public class ResponderPregunta : MonoBehaviour {
     private float seg;
    
     public static int contador;
+    public static int contadorTeorias;
     public static int puntos;
 
 	void Start (){
@@ -70,16 +71,17 @@ public class ResponderPregunta : MonoBehaviour {
             }
         }
 
-        if (contador == activarPregunta.NumTeoria)
-        {
-            seg += Time.deltaTime;
-            if (seg > 1)
+      
+            if (contadorTeorias == activarPregunta.NumTeoria)
             {
-                Destroy(objetoCanvas.transform.GetChild(2).gameObject);
+                seg += Time.deltaTime;
+                if (seg > 1)
+                {
+                    Destroy(objetoCanvas.transform.GetChild(2).gameObject);
+                    contadorTeorias = 0;
             }
-        }
-        
-
+            }
+       
     }
 
 	public void Preguntas(){
@@ -88,7 +90,15 @@ public class ResponderPregunta : MonoBehaviour {
 		StartCoroutine (res_correcta ());
 	}
 
-	IEnumerator res_correcta(){
+    public void Teorias()
+    {
+        contadorTeorias += 1;
+        puntos += puntosPorRespuesta;
+        StartCoroutine(res_correcta());
+    }
+
+
+    IEnumerator res_correcta(){
 
 
         if (puntosPorRespuesta == 1)
@@ -111,11 +121,6 @@ public class ResponderPregunta : MonoBehaviour {
 		canva_puntos.text = "puntos: " + puntos;
        
         Destroy (Pregunta);
-
-        //Destroy(SubjefeObj);
-       
-
-      //  Enemigo.GetComponent<CapsuleCollider> ().enabled = false;
 	}
 
     

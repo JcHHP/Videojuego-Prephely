@@ -2269,8 +2269,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1020288383644467207}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Preguntas
+        m_TargetAssemblyTypeName: ResponderPregunta, Assembly-CSharp
+        m_MethodName: Teorias
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3727,7 +3727,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Continuar
+  m_Text: siguiente
 --- !u!1 &2659973871079053475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,8 +3853,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4323030507188099704}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Preguntas
+        m_TargetAssemblyTypeName: ResponderPregunta, Assembly-CSharp
+        m_MethodName: Teorias
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5494,7 +5494,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -148, y: -82}
+  m_AnchoredPosition: {x: 104, y: -113}
   m_SizeDelta: {x: -683.3082, y: -217.62277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5886439864790451521
@@ -5517,7 +5517,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
+  m_CellSize: {x: 300, y: 100}
   m_Spacing: {x: 0, y: 7.83}
   m_Constraint: 1
   m_ConstraintCount: 4
@@ -7793,8 +7793,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7056781571491426935}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Preguntas
+        m_TargetAssemblyTypeName: ResponderPregunta, Assembly-CSharp
+        m_MethodName: Teorias
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8084,7 +8084,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: A
+  m_Text: Siguiente
 --- !u!1 &8323476765841166394
 GameObject:
   m_ObjectHideFlags: 0
@@ -8538,7 +8538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10, y: -82}
+  m_AnchoredPosition: {x: 57, y: -108}
   m_SizeDelta: {x: -683.3082, y: -217.62277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1832028974948644677
@@ -8561,7 +8561,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 250, y: 80}
+  m_CellSize: {x: 300, y: 100}
   m_Spacing: {x: 0, y: 7.83}
   m_Constraint: 1
   m_ConstraintCount: 4
@@ -8863,7 +8863,7 @@ RectTransform:
   m_GameObject: {fileID: 8771093017677428513}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.836757, y: 0.43587747, z: 1}
+  m_LocalScale: {x: 1.2102512, y: 1.2034657, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6148229081266592955}
@@ -8872,7 +8872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 162, y: -105.604126}
+  m_AnchoredPosition: {x: 74, y: -163}
   m_SizeDelta: {x: -654.8356, y: -137.8028}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4334357259082852652
