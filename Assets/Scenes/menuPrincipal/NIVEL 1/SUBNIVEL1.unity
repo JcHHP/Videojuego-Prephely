@@ -8760,6 +8760,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3590758471402345906, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
+      propertyPath: m_Text
+      value: terminar
+      objectReference: {fileID: 0}
     - target: {fileID: 3595919015320059118, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -16107,6 +16111,7 @@ MonoBehaviour:
   animador: {fileID: 1558796388}
   barraDeVida: {fileID: 117725278}
   activarPregunta: {fileID: 0}
+  activar2Pregunta: {fileID: 0}
 --- !u!114 &1558796387
 MonoBehaviour:
   m_ObjectHideFlags: 0
