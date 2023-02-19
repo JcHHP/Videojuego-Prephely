@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class allqamari_movimientos : MonoBehaviour
+public class Allqamari_movimientos : MonoBehaviour
 {
   
     private AudioSource sonidojefe;
     public AudioClip sonidoPigman;
-    public AudioClip aparecerPreguntaPigman;
+  
 
     public Animator animacion_allqamari;
 
@@ -37,7 +37,7 @@ public class allqamari_movimientos : MonoBehaviour
 
 
             sonidojefe.Pause();
-            //sonidojefe.PlayOneShot(aparecerPreguntaPigman);
+            
             //Aparecer Preguntas 
 
         }

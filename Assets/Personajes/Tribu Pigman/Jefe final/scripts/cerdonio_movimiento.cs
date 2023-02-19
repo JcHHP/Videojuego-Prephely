@@ -38,7 +38,8 @@ public class cerdonio_movimiento : MonoBehaviour
         if (Vector3.Distance(transform.position, buscar_prephely.transform.position) <= 6)
         {
             animacion_cerdonio.SetBool("lanzar_pregunta", true );
-             sonidojefe.Pause();
+
+           //  sonidojefe.Pause();
            // Invoke(" Verpregunta", 1f);
             if (activar2Pregunta)
             {
@@ -48,6 +49,12 @@ public class cerdonio_movimiento : MonoBehaviour
                     Verpregunta();
                 }
             } 
+
+          //  sonidojefe.Pause();
+            //
+            //Aparecer Preguntas 
+
+
         } 
     }
 

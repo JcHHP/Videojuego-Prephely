@@ -9,12 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu_Inicial/Menu_Inicial.unity
     guid: 8bf0dc10488a8c84b85dd377ee92c588
   - enabled: 1
-    path: Assets/Scenes/menuPrincipal/Esc.JefeFinal.unity
-    guid: 6ba5288cfb39a7448b987fa1c1ee4914
-  - enabled: 1
-    path: Assets/Scenes/menuPrincipal/escenaSubjefePigman.unity
-    guid: 94ff1b53a0397ca49aae0f42a42a25ee
+    path: Assets/Scenes/Seleccion de niveles/Seleccionar Nivel.unity
+    guid: 61c05b3d350f9c744a4e8d408936aecf
   - enabled: 1
     path: Assets/Scenes/menuPrincipal/menuPrincipal.unity
     guid: 993b527531d171849b734a34ee2953e5
+  - enabled: 1
+    path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 1.unity
+    guid: d25e7f5ac7f87b240a28e302c821f0a3
+  - enabled: 1
+    path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 2.unity
+    guid: d84756bd590f5844281db6d00c930db6
+  - enabled: 1
+    path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 4.unity
+    guid: 1e571791ea96abb4980a0d57837499f4
+  - enabled: 1
+    path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 3.unity
+    guid: e7ca90e9b94f58d4eaefc5f5ab8de2a1
+  - enabled: 1
+    path: Assets/Scenes/Menu_Inicial/creditos.unity
+    guid: 29d81dd07f617a94588f467c537afdc1
   m_configObjects: {}

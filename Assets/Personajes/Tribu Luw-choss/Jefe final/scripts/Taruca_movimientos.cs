@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class taruca_movimientos : MonoBehaviour
+public class Taruca_movimientos : MonoBehaviour
 {
 
 
 
     private AudioSource sonidojefe;
     public AudioClip sonidoTaruca;
-    public AudioClip aparecerPreguntaTaruca;
-
+   
     public Animator animacion_taruca;
 
     public GameObject buscar_prephely;
@@ -39,7 +38,7 @@ public class taruca_movimientos : MonoBehaviour
 
 
             sonidojefe.Pause();
-            //sonidojefe.PlayOneShot(aparecerPreguntaPigman);
+            
             //Aparecer Preguntas Aqui
 
         }
