@@ -19,7 +19,7 @@ public class Activador2Pregunta : MonoBehaviour {
     public GameObject prephelyObj;
     public logicavida_cerdonio jefe;
     public int contador = 0;
-   // public int NumTeoria;
+ 
    
     public GameObject SubjefeObj;
 
@@ -28,7 +28,6 @@ public class Activador2Pregunta : MonoBehaviour {
     void Start () {
 
         jefe = FindObjectOfType<logicavida_cerdonio>();
-        // SubjefeObj = GameObject.Find("Subjefe Pigman");
         prephelyObj = GameObject.Find("Prephely");
         Prephely =prephelyObj.GetComponent<movimientos>();
  
@@ -38,7 +37,6 @@ public class Activador2Pregunta : MonoBehaviour {
         hijo2.gameObject.SetActive(false);
 
         hijo3 = objetoCanva.transform.GetChild(3).gameObject;
-        //  NumTeoria = hijo2.transform.childCount;
 
         // iniciando lista
         gameObjectListP = new List<GameObject>();
@@ -57,10 +55,7 @@ public class Activador2Pregunta : MonoBehaviour {
 
         for (int i = 0; i <hijo3.transform.childCount; i += 1)
         {
-                hijo3.transform.GetChild(i).gameObject.SetActive(false);
-           
-            //hijo2.transform.GetChild(i).gameObject.SetActive(false);
-           
+             hijo3.transform.GetChild(i).gameObject.SetActive(false);
         }
 
     }
@@ -71,12 +66,6 @@ public class Activador2Pregunta : MonoBehaviour {
         {
             Prephely.GetComponent<movimientos>().enabled = true;
         }
-        // CAMBIAR
-       // if (SubjefeObj.GetComponent<logicaVidaSubjefes>().vidaSubjefe <= 0)
-       // {
-         //   Prephely.GetComponent<movimientos>().enabled = true;
-
-       // }
     }
 
     public void ActivarPreguntas()

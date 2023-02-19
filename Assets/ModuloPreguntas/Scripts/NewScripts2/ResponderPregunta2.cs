@@ -30,7 +30,7 @@ public class ResponderPregunta2 : MonoBehaviour {
     public static int puntos;
 
 	void Start (){
-      //  teoria = FindObjectOfType<logicateoria>();
+     
         objetoCanvas = GameObject.Find("CanvasPreguntas");
 
         activarPregunta = FindObjectOfType<Activador2Pregunta>();
@@ -39,7 +39,6 @@ public class ResponderPregunta2 : MonoBehaviour {
         VidaPrifelyObj = GameObject.Find("Prephely");
         VidaPrifely = VidaPrifelyObj.GetComponent<logicaVidaPrephely>();
 
-      //  VidaEnemigo = Subjefe.vidaSubjefe;
         botones = GetComponentInParent<Botones>();
 
         sonido = GetComponent<AudioSource>();
