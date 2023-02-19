@@ -8496,22 +8496,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1450954998038505753, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0.000030518
-      objectReference: {fileID: 0}
-    - target: {fileID: 1450954998038505753, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1450954998038505753, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1450954998038505753, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.0000076293945
-      objectReference: {fileID: 0}
     - target: {fileID: 1765691810233551716, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8586,7 +8570,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2334324043145161517, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_Text
-      value: Siguiente Subnivel
+      value: 'Siguiente Subnivel
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 2334324043145161517, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -8754,10 +8740,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3447068935365571841, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3595919015320059118, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3656475122391097088, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
@@ -8962,27 +8944,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5559599151248170744, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5559599151248170744, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5559599151248170744, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5559599151248170744, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5559599151248170744, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5559599151248170744, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5845683745751525685, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9055,10 +9037,6 @@ PrefabInstance:
     - target: {fileID: 6148229081266592955, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6325040405166666676, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6329669446050212727, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_RootOrder
@@ -9165,18 +9143,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6934203747790146942, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.376602
-      objectReference: {fileID: 0}
-    - target: {fileID: 6934203747790146942, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.7392486
-      objectReference: {fileID: 0}
-    - target: {fileID: 6934203747790146942, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.8773585
-      objectReference: {fileID: 0}
-    - target: {fileID: 6934203747790146942, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -9201,16 +9167,12 @@ PrefabInstance:
       value: siguiente_escena, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6934203747790146942, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: SUBNIVEL1 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6934203747790146942, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7026182961050923309, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_Text
-      value: Reintentar Suvnivel
+      value: Reintentar Subnivel
       objectReference: {fileID: 0}
     - target: {fileID: 7026182961050923309, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -9218,7 +9180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7026182961050923309, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7056781571491426935, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: inCorrecto
@@ -9370,7 +9332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8269697709586979594, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: SUBNIVEL1 1
+      value: SUBNIVEL1 4
       objectReference: {fileID: 0}
     - target: {fileID: 8269697709586979594, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
