@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a29f34a809e85e54eb8e53bae85e10c6
+guid: 43a65c9137c0692439973ca14c0b2254
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Mutant Dying
+      name: mixamo.com
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 138
+      lastFrame: 78
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
