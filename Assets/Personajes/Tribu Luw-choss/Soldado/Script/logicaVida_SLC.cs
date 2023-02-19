@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Logica_vida_pigman : MonoBehaviour
+public class logicaVida_SLC : MonoBehaviour
 {
-    public int vidMaxSoldadoPig;
-    public float vidaActualSolpig;
+    // Start is called before the first frame update
+    public int vidMaxSoldadoLuw;
+    public float vidaActualSolLuw;
     public Image imgBarraVida;
     public Animator anim_soldado;
     public GameObject lanza;
@@ -20,9 +21,9 @@ public class Logica_vida_pigman : MonoBehaviour
 
     void Start()
     {
-        vidMaxSoldadoPig = 20;
-        vidaActualSolpig = vidMaxSoldadoPig;  //Cuando empieze el juego la vida = vida máxima
-        audios= GetComponent<AudioSource>();
+        vidMaxSoldadoLuw = 30;
+        vidaActualSolLuw = vidMaxSoldadoLuw;  //Cuando empieze el juego la vida = vida máxima
+        audios = GetComponent<AudioSource>();
         lanza.GetComponent<BoxCollider>().enabled = false;
     }
 
@@ -31,7 +32,7 @@ public class Logica_vida_pigman : MonoBehaviour
     {
         RevisarVida();
 
-        if (vidaActualSolpig <= 0)  //si la vida es 0 
+        if (vidaActualSolLuw <= 0)  //si la vida es 0 
         {
             //gameObject.SetActive(false);
             anim_soldado.Play("Muerte");
@@ -43,7 +44,7 @@ public class Logica_vida_pigman : MonoBehaviour
 
     public void RevisarVida()
     {
-        imgBarraVida.fillAmount = vidaActualSolpig / vidMaxSoldadoPig;
+        imgBarraVida.fillAmount = vidaActualSolLuw / vidMaxSoldadoLuw;
     }
 
     public void desactivar()
@@ -56,27 +57,27 @@ public class Logica_vida_pigman : MonoBehaviour
         if (objeto.gameObject.CompareTag("Espada"))
         {
             anim_soldado.Play("Recibe golpe");
-            vidaActualSolpig -= 5f;
-            imgBarraVida.fillAmount = vidaActualSolpig / vidMaxSoldadoPig;
+            vidaActualSolLuw -= 5f;
+            imgBarraVida.fillAmount = vidaActualSolLuw / vidMaxSoldadoLuw;
         }
     }
 
     public void SoltarPergamino()
     {
-        
+
         if (!objetoYaInstanciado)
         {
             audios.PlayOneShot(soltarBonus);
             GameObject objeto = Instantiate(objetoASoltar, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
             Rigidbody objetoRb = objeto.GetComponent<Rigidbody>();
-            objetoRb.AddForce(new Vector3(3,7,3), ForceMode.Impulse);
+            objetoRb.AddForce(new Vector3(3, 7, 3), ForceMode.Impulse);
             objetoYaInstanciado = true;
         }
     }
 
     public void SoltarCorazon()
     {
-    
+
         if (!objetoYaInstanciado2 && Random.Range(1, 5) == probabilidadDeSoltar)
         {
             Instantiate(Corazon, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
