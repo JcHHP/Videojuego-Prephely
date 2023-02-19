@@ -526,6 +526,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477050279}
   m_CullTransparentMesh: 1
+--- !u!4 &516314856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8447082967072642302, guid: 3c1989bc04d4dba45b5979043392ab8b, type: 3}
+  m_PrefabInstance: {fileID: 1782899039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &551614531
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +703,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &606985854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 606985856}
+  - component: {fileID: 606985855}
+  m_Layer: 0
+  m_Name: Mano
+  m_TagString: Lanza
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &606985855
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606985854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5454291, y: 2.906789, z: 1.5845392}
+  m_Center: {x: 0.2727144, y: -0.37062654, z: -0.29226983}
+--- !u!4 &606985856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606985854}
+  m_LocalRotation: {x: 0.14467008, y: -0.08028044, z: 0.04398099, w: -0.9852367}
+  m_LocalPosition: {x: 0.013, y: -0.041, z: 0.022}
+  m_LocalScale: {x: 0.12999998, y: 0.13, z: 0.13000003}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 516314856}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -17.363, y: 10.328, z: -6.845}
 --- !u!1 &692938760
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,6 +2274,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1536852109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1082271958561512970, guid: 3c1989bc04d4dba45b5979043392ab8b, type: 3}
+  m_PrefabInstance: {fileID: 1782899039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1536852111
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536852109}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.30557895
+  m_Height: 2.1580963
+  m_Direction: 1
+  m_Center: {x: -0.018542409, y: -0.10551357, z: 0.027978182}
 --- !u!1 &1541498536 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9cf882fc7c569144e89c41ca4476e93b, type: 3}
@@ -3440,8 +3509,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2147280047}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 3c1989bc04d4dba45b5979043392ab8b, type: 3}
-  m_Controller: {fileID: 9100000, guid: 538106bacf1b4ce43be69bdfb4506d97, type: 2}
+  m_Avatar: {fileID: 9000000, guid: 2a4c6bbb7203ac04da9a6119a83e36b7, type: 3}
+  m_Controller: {fileID: 9100000, guid: 06507b7f85eb18b44bd92ef198e203a0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3486,7 +3555,7 @@ MonoBehaviour:
   vidaActualSolLuw: 0
   imgBarraVida: {fileID: 2108366098}
   anim_soldado: {fileID: 2147280048}
-  lanza: {fileID: 0}
+  lanza: {fileID: 606985854}
   objetoASoltar: {fileID: 779965164}
   Corazon: {fileID: 1488987952}
   soltarBonus: {fileID: 8300000, guid: ffc03b0cf48e53549b4da94c0c1c931a, type: 3}
@@ -3509,7 +3578,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!82 &2147280053
 AudioSource:
