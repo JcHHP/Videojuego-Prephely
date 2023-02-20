@@ -32,12 +32,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/menuPrincipal/escenaSubjefePigman.unity
     guid: 94ff1b53a0397ca49aae0f42a42a25ee
-  - enabled: 1
-    path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 2.unity
-    guid: d84756bd590f5844281db6d00c930db6
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 4.unity
     guid: 1e571791ea96abb4980a0d57837499f4
+  - enabled: 1
+    path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 2.unity
+    guid: 303e033a07ed6fb41aa612b66f294bb9
   - enabled: 1
     path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 3.unity
     guid: e7ca90e9b94f58d4eaefc5f5ab8de2a1
@@ -47,4 +50,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 5.unity
     guid: 40a798b21982dc74b82cb288642b4f3a
+  - enabled: 1
+    path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 6.unity
+    guid: a8db7d38848294b48b4c215adb0af16c
+  - enabled: 1
+    path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 7.unity
+    guid: 04562397eca7cc04b99bd3ee18c23620
+  - enabled: 1
+    path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 8.unity
+    guid: 581c353a922527c48935b00c8a2bf7e4
   m_configObjects: {}
