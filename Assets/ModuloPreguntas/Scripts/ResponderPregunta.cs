@@ -103,11 +103,13 @@ public class ResponderPregunta : MonoBehaviour {
             gameObject.GetComponent<Image>().color = verdeColor;
             Subjefe.vidaSubjefe = Subjefe.vidaSubjefe - 250;
 
+
         }
         if (puntosPorRespuesta == -1)
         {
             gameObject.GetComponent<Image>().color = rojoColor;
             VidaPrifely.vidaPrephely = VidaPrifely.vidaPrephely - 50;
+            VidaPrifely.barraDeVida.fillAmount = VidaPrifely.vidaPrephely / 100;
         }
 
         sonido.Play();
