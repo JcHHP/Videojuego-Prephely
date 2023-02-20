@@ -5090,7 +5090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1350732369}
-  puntosPorRespuesta: -1
+  puntosPorRespuesta: 1
   Pregunta: {fileID: 1356845495}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -9729,7 +9729,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4472ae22f16a1a04abdc328fa2010f01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb1b1ccd9a344664daa76a350411e62a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -9996,7 +9996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1350732369}
-  puntosPorRespuesta: -1
+  puntosPorRespuesta: 1
   Pregunta: {fileID: 1064606966}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -12200,7 +12200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1350732369}
-  puntosPorRespuesta: -1
+  puntosPorRespuesta: 1
   Pregunta: {fileID: 471209778}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -15639,7 +15639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 50f571f6f09f38a458c6d6b15b47935f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c50ee5204469efa4eaf0b55bb1aa9929, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -15712,7 +15712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1350732369}
-  puntosPorRespuesta: 1
+  puntosPorRespuesta: -1
   Pregunta: {fileID: 471209778}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -18723,7 +18723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6934203747790146942, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: SUBNIVEL1 5
+      value: SUBNIVEL1 7
       objectReference: {fileID: 0}
     - target: {fileID: 6934203747790146942, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -18903,7 +18903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8269697709586979594, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: SUBNIVEL1 4
+      value: SUBNIVEL1 6
       objectReference: {fileID: 0}
     - target: {fileID: 8269697709586979594, guid: e70e2dfdc5f14fa4a868189152e3acc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -19451,7 +19451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1350732369}
-  puntosPorRespuesta: 1
+  puntosPorRespuesta: -1
   Pregunta: {fileID: 1356845495}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -20342,7 +20342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1350732369}
-  puntosPorRespuesta: 1
+  puntosPorRespuesta: -1
   Pregunta: {fileID: 1064606966}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -21430,7 +21430,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 94103bb50ddd7ca4486114f1dd2ac820, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5eafeffe43e8d9b43829db1869f884a8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -21700,7 +21700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 64e322e0ce641a9428c4ec462a321374, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a11935e10f364440b8e6093b1b3f828, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
