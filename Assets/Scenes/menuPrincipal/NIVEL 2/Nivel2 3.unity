@@ -625,7 +625,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c9febc73ce51fe4089e87d2695d937c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad2d59ca655d3f14299b83c3806ac0ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2274,7 +2274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e6cb9ff6995e9554c948237750949124, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31e6a7f981a6ace46b9cfe2b22beb6df, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5779,7 +5779,7 @@ GameObject:
   - component: {fileID: 615041476}
   - component: {fileID: 615041477}
   m_Layer: 5
-  m_Name: teoria1 (1)
+  m_Name: teoria2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8170,7 +8170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 112, y: -152}
+  m_AnchoredPosition: {x: 139, y: -167}
   m_SizeDelta: {x: -683.3082, y: -217.62277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770716269
@@ -8416,7 +8416,7 @@ GameObject:
   - component: {fileID: 798166801}
   - component: {fileID: 798166802}
   m_Layer: 5
-  m_Name: Pregunta1  (1)
+  m_Name: Pregunta2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8790,7 +8790,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ade683a6317712043ad284636454f5d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 157e0a0971a7c814a8c9ef0a742c8957, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -13129,7 +13129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1784595925}
-  puntosPorRespuesta: 1
+  puntosPorRespuesta: -1
   Pregunta: {fileID: 988312113}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -14409,7 +14409,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 128, y: -165}
+  m_AnchoredPosition: {x: 132, y: -165}
   m_SizeDelta: {x: -683.3082, y: -217.62277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1363478487
@@ -15549,7 +15549,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 73df4aa5861f8454e92616088fa32548, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09db99fabcb04e2418243b0ca67ad54c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -16002,7 +16002,7 @@ GameObject:
   - component: {fileID: 1570248056}
   - component: {fileID: 1570248057}
   m_Layer: 5
-  m_Name: Pregunta1  (2)
+  m_Name: Pregunta3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17035,7 +17035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1784595925}
-  puntosPorRespuesta: -1
+  puntosPorRespuesta: 1
   Pregunta: {fileID: 988312113}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -19872,7 +19872,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0d69e2524a6b26f4da23415dafd02b9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2d120a3e0989e5429d003a9ffb4ae2e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
