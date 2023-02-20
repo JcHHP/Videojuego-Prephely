@@ -16,14 +16,14 @@ public class movimientosSubjefeLuw : MonoBehaviour
     private AudioSource sonidosSubjefe;
     //public AudioClip sonidoInvocar;
 
-    //public ActivadorPregunta activarPregunta;
+    public ActivadorPregunta3 activarPregunta;
     private logicaVidaSubjefes Subjefe;
     private int vida = 500;
 
     private bool invocarReproducido = false;
     void Start()
     {
-        //activarPregunta = GetComponentInParent<ActivadorPregunta>();
+        activarPregunta = GetComponentInParent<ActivadorPregunta3>();
 
         Subjefe = GetComponentInParent<logicaVidaSubjefes>();
 
@@ -56,8 +56,8 @@ public class movimientosSubjefeLuw : MonoBehaviour
         }
         else
         {
-            if (vida <= 400)
-            {
+            //if (vida <= 400)
+           // {
                 if (!invocarReproducido)
                 {
                     //sonidosSubjefe.Pause();
@@ -65,10 +65,10 @@ public class movimientosSubjefeLuw : MonoBehaviour
                     animator.Play("Invocar");
 
                     invocarReproducido = true;
-                    //Invoke("Verpregunta", 2f);
+                    Invoke("Verpregunta", 2f);
 
                 }
-            }
+          //  }
             else
             {
                 animator.SetBool("atacar", true);
@@ -118,11 +118,11 @@ public class movimientosSubjefeLuw : MonoBehaviour
 
     void Verpregunta()
     {
-        //activarPregunta.ActivarPreguntas();
+        activarPregunta.ActivarPreguntas();
     }
 
     void VerMensajeTriunfo()
     {
-        //activarPregunta.VerMensajeTriunfo();
+        activarPregunta.VerMensajeTriunfo();
     }
 }

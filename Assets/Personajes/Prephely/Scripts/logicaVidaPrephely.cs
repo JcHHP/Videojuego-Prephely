@@ -14,10 +14,12 @@ public class logicaVidaPrephely : MonoBehaviour
 
     private float seg;
     public ActivadorPregunta activarPregunta;
+    public ActivadorPregunta3 activarPregunta3;
     public Activador2Pregunta activar2Pregunta;
     private void Start()
     {
         activarPregunta = FindObjectOfType<ActivadorPregunta>();
+        activarPregunta3 = FindObjectOfType<ActivadorPregunta3>();
         activar2Pregunta = FindObjectOfType<Activador2Pregunta>();
         vidaPrephely = vidMaxPrephely; 
         capsCollider= GetComponent<CapsuleCollider>();
@@ -41,6 +43,11 @@ public class logicaVidaPrephely : MonoBehaviour
                 if (activar2Pregunta)
                 {
                     Invoke("VerMensajeWarning2", 2f);
+                }
+
+                if (activarPregunta3)
+                {
+                    Invoke("VerMensajeWarning3", 2f);
                 }
 
 
@@ -87,6 +94,10 @@ public class logicaVidaPrephely : MonoBehaviour
     void VerMensajeWarning2()
     {
         activar2Pregunta.VerMensajeWarning();
+    }
+    void VerMensajeWarning3()
+    {
+        activarPregunta3.VerMensajeWarning();
     }
 
 }

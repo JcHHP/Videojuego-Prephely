@@ -11,10 +11,12 @@ public class logicateoria : MonoBehaviour
     public GameObject cerca;
 
     public ActivadorPregunta activarPregunta;
+    public ActivadorPregunta3 activarPregunta3;
     // Start is called before the first frame update
     void Start()
     {
         activarPregunta = FindObjectOfType<ActivadorPregunta>();
+        activarPregunta3 = FindObjectOfType<ActivadorPregunta3>();
         Teoria = 0;
     }
 
@@ -23,11 +25,23 @@ public class logicateoria : MonoBehaviour
     {
         desbloquearCerca();
         RevisarTeoria();
-
-        if (Teoria == 3)
+        if (activarPregunta)
         {
-            Invoke("VerTeoria", 1f);
+            if (Teoria == 3)
+            {
+                Invoke("VerTeoria", 1f);
+            }
         }
+
+        if (activarPregunta3)
+        {
+            if (Teoria == 3)
+            {
+                Invoke("VerTeoria3", 1f);
+            }
+        }
+
+
     }
 
     public void RevisarTeoria()
@@ -54,5 +68,10 @@ public class logicateoria : MonoBehaviour
     void VerTeoria()
     {
         activarPregunta.VerTeoria();
+    }
+
+    void VerTeoria3()
+    {
+        activarPregunta3.VerTeoria();
     }
 }
