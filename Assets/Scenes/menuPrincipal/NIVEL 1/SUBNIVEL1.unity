@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20184,7 +20184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9cf882fc7c569144e89c41ca4476e93b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9cf882fc7c569144e89c41ca4476e93b, type: 3}
       propertyPath: m_TagString
@@ -21539,6 +21539,7 @@ MonoBehaviour:
   animador: {fileID: 1558796388}
   barraDeVida: {fileID: 117725278}
   activarPregunta: {fileID: 0}
+  activarPregunta3: {fileID: 0}
   activar2Pregunta: {fileID: 0}
 --- !u!114 &1558796387
 MonoBehaviour:
@@ -21636,6 +21637,7 @@ MonoBehaviour:
   Teoria: 0
   cerca: {fileID: 642089025}
   activarPregunta: {fileID: 0}
+  activarPregunta3: {fileID: 0}
 --- !u!82 &1558796393
 AudioSource:
   m_ObjectHideFlags: 0
