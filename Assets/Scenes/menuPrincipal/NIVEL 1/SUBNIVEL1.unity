@@ -2582,7 +2582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1363771597}
-  puntosPorRespuesta: 1
+  puntosPorRespuesta: -1
   Pregunta: {fileID: 102508395}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -3714,7 +3714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b62a4672de0124c4db9fd5b9aef6467b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ed6eb6bf099898e4795de5167a76a657, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6154,7 +6154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1363771597}
-  puntosPorRespuesta: 1
+  puntosPorRespuesta: -1
   Pregunta: {fileID: 604413458}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -15232,7 +15232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1363771597}
-  puntosPorRespuesta: -1
+  puntosPorRespuesta: 1
   Pregunta: {fileID: 604413458}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -15654,7 +15654,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b62a4672de0124c4db9fd5b9aef6467b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd305312624fda740b651ff94b12b8cd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -16982,7 +16982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1363771597}
-  puntosPorRespuesta: -1
+  puntosPorRespuesta: 1
   Pregunta: {fileID: 1963486090}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -24746,7 +24746,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b62a4672de0124c4db9fd5b9aef6467b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4be57b241dd20947b07d467f7004316, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -25285,7 +25285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1363771597}
-  puntosPorRespuesta: -1
+  puntosPorRespuesta: 1
   Pregunta: {fileID: 102508395}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
@@ -25934,7 +25934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canva_puntos: {fileID: 1363771597}
-  puntosPorRespuesta: 1
+  puntosPorRespuesta: -1
   Pregunta: {fileID: 1963486090}
   Correcto: {fileID: 8300000, guid: a51a5f6b6ff119f4bbc658b81c321112, type: 3}
   inCorrecto: {fileID: 8300000, guid: 3a8e5ba33f3904b47acfe8bffe1a20a4, type: 3}
