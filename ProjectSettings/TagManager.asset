@@ -12,6 +12,7 @@ TagManager:
   - Lanza
   - Corazon
   - Pergamino
+  - espadaSubjefeAnkas
   layers:
   - Default
   - TransparentFX

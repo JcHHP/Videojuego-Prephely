@@ -42,14 +42,7 @@ EditorBuildSettings:
     path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 3.unity
     guid: e7ca90e9b94f58d4eaefc5f5ab8de2a1
   - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/Menu_Inicial/creditos.unity
-    guid: 29d81dd07f617a94588f467c537afdc1
-  - enabled: 1
     path: Assets/Scenes/menuPrincipal/NIVEL 1/SubFinal/SUBFINAL.unity
-=======
-    path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBFINAL.unity
->>>>>>> 6cabdd10b1655c51fc60428c1bcd944150b80175
     guid: 220d4a269c07024429e042e78b5e4561
   - enabled: 1
     path: Assets/Scenes/menuPrincipal/NIVEL 1/SUBNIVEL1 5.unity
