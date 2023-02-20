@@ -21499,7 +21499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cf882fc7c569144e89c41ca4476e93b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 536.9
+      value: 536.864
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cf882fc7c569144e89c41ca4476e93b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22616,6 +22616,7 @@ MonoBehaviour:
   animador: {fileID: 1558796388}
   barraDeVida: {fileID: 117725278}
   activarPregunta: {fileID: 0}
+  activarPregunta3: {fileID: 0}
   activar2Pregunta: {fileID: 0}
 --- !u!114 &1558796387
 MonoBehaviour:
@@ -22713,6 +22714,7 @@ MonoBehaviour:
   Teoria: 0
   cerca: {fileID: 642089025}
   activarPregunta: {fileID: 0}
+  activarPregunta3: {fileID: 0}
 --- !u!82 &1558796393
 AudioSource:
   m_ObjectHideFlags: 0
