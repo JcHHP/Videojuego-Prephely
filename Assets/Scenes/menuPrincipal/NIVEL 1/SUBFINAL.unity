@@ -8487,6 +8487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasGeneral: {fileID: 0}
   canvasCreditos: {fileID: 0}
+  canvasOpciones: {fileID: 0}
 --- !u!4 &1394502142
 Transform:
   m_ObjectHideFlags: 0
