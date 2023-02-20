@@ -18,7 +18,7 @@ public class movimientosSubjefeAnkas : MonoBehaviour
 
     //public ActivadorPregunta activarPregunta;
     private logicaVidaSubjefes Subjefe;
-    private int vida;
+    private int vida = 500;
 
     private bool invocarReproducido = false;
     void Start()
@@ -44,7 +44,7 @@ public class movimientosSubjefeAnkas : MonoBehaviour
             animator.SetBool("atacar", false);
             hacerGuardia();
 
-        }else if (Vector3.Distance(transform.position, objetivo.transform.position) >= 3)
+        }else if (Vector3.Distance(transform.position, objetivo.transform.position) >= 3 && !invocarReproducido)
         {
             animator.SetBool("caminar", true);
             var lookPos = objetivo.transform.position - transform.position;
@@ -55,16 +55,24 @@ public class movimientosSubjefeAnkas : MonoBehaviour
         }
         else
         {
-            if (!invocarReproducido)
+            if(vida<= 400)
             {
-                //sonidosSubjefe.Pause();
-                //sonidosSubjefe.PlayOneShot(sonidoInvocar);
-                animator.Play("Invocar");
+                if (!invocarReproducido)
+                {
+                    //sonidosSubjefe.Pause();
+                    //sonidosSubjefe.PlayOneShot(sonidoInvocar);
+                    animator.Play("Invocar");
 
-                invocarReproducido = true;
-                //Invoke("Verpregunta", 2f);
-                
+                    invocarReproducido = true;
+                    //Invoke("Verpregunta", 2f);
+
+                }
             }
+            else
+            {
+                animator.SetBool("atacar", true);
+            }
+           
         }
 
         if (vida <= 0)
